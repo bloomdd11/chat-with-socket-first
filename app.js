@@ -15,8 +15,8 @@ app.get('/', (req, res) => {
 io.on('connection', (socket) => {
   socket.on('chat message', (msg) => {
     io.emit('chat message', msg)
-    console.log('message: ' + msg);
+    //console.log('message: ' + msg);
   })
 })
 
-server.listen(port, () => console.log(`listing on port${port}`))
+server.listen(port, () => console.log(`listening on http://localhost:${port}`))
